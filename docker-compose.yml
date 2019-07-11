@@ -1,0 +1,100 @@
+version: '3'
+services:
+
+   elasticsearch:
+      build:
+         context: elasticsearch/
+         dockerfile: Dockerfile
+         args:
+            ELK_VERSION: $ELK_VERSION
+      restart: on-failure
+      volumes:
+         - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+      environment:
+         ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+         ELASTIC_PASSWORD: PheiKeephop1oomo1di9
+      ulimits:
+         memlock:
+            soft: -1
+            hard: -1
+      ports:
+         - "9200:9200"
+         - "9300:9300"
+      networks:
+         - rede_oraculo
+
+   logstash:
+      build:
+         context: logstash/
+         dockerfile: Dockerfile
+         args:
+            ELK_VERSION: $ELK_VERSION
+      restart: on-failure
+      ports:
+         - "5044:5044"
+      environment:
+         LOG_LEVEL: error
+      links:
+         - elasticsearch
+      networks:
+         - rede_oraculo
+
+   filebeat:
+      build:
+         context: filebeat/
+         dockerfile: Dockerfile
+         args:
+            ELK_VERSION: $ELK_VERSION
+      volumes:
+         - "/var/lib/docker/containers:/usr/share/dockerlogs/data:ro"
+         - "/var/run/docker.sock:/var/run/docker.sock"
+         - log_statico:/var/log/shared
+      links:
+         - logstash
+         - oraculo_bot
+      depends_on:
+         - logstash
+      networks:
+         - rede_oraculo
+
+   kibana:
+      build:
+         context: kibana/
+         args:
+            ELK_VERSION: $ELK_VERSION
+      volumes:
+         - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+      ports:
+         - "5601:5601"
+      restart: on-failure
+      links:
+         - elasticsearch
+      environment:
+         - "LOGGING_QUIET=true"
+      depends_on:
+         - elasticsearch
+      networks:
+         - rede_oraculo
+
+   oraculo_bot:
+      hostname: oraculo_bot
+      build:
+         context: oraculo/
+      restart: on-failure
+      volumes:
+         - log_statico:/var/log/shared
+      networks:
+         - rede_oraculo
+
+volumes:
+   log_statico:
+      driver: local
+      driver_opts:
+         type: none
+         o: bind
+         device: "/var/log/shared"
+
+networks:
+  rede_oraculo:
+   driver: bridge
+

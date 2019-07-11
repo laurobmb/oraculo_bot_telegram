@@ -1,5 +1,3 @@
-# oraculo_bot_telegram
-
 Oráculo BOT Telegram com ELK
 =========================
 
