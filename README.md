@@ -18,32 +18,32 @@ OBS: Antes de executar o projeto siga todos os passos abaixo, observando o ambie
 
 https://core.telegram.org/bots
 
-## Coloque o seu ID no BOT
+#### Coloque o seu ID no BOT
 # caso não coloque o BOT ficará lhe ignorando mandando frases aleatórias  	
 	lauro=67993868
 
-##### Alterar os paramentos nos seguintes arquivos para ajustar ao ambiente de testes
+## Alterar os paramentos nos seguintes arquivos para ajustar ao ambiente de testes
 
-## /filebeat/filebeat.yml
+#### /filebeat/filebeat.yml
 	paths:
 		- "/var/log/shared/oraculo.log"
 
-## /kibana/config/kibana.yml
+#### /kibana/config/kibana.yml
 	elasticsearch.username: elastic
 	elasticsearch.password: PheiKeephop1oomo1di9
 
-## /logstash/config/logstash.yml
+#### /logstash/config/logstash.yml
 	xpack.monitoring.elasticsearch.username: elastic
 	xpack.monitoring.elasticsearch.password: PheiKeephop1oomo1di9
 
-## /logstash/pipeline/logstash.conf
+#### /logstash/pipeline/logstash.conf
 	filter {
 		if [log][file][path] == "/var/log/shared/oraculo.log" {
 
 	user => "elastic"
 	password => "PheiKeephop1oomo1di9"			
 
-## .env
+#### .env
 	Colocar a versão desejada da Elastic Stack
 	https://www.elastic.co/pt/products/
 
