@@ -10,9 +10,9 @@ Este BOT é para finalidade de estudo de auditoria de LOG usando a suite do ELK.
 
 OBS: Antes de executar o projeto siga todos os passos abaixo, observando o ambiente que esta executando o DOCKER
 
-##### Trocar o token do BOT do Telegram
+## Trocar o token do BOT do Telegram
 
-## /oraculo/bot.py
+#### /oraculo/bot.py
 	
 		TOKEN='868879441:AAE0BXeFe9eW4QOKKA_ZxhijiNdg-FB_jTY'
 
