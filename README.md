@@ -7,14 +7,14 @@ Oráculo BOT Telegram com ELK
 
 #### Está em uso na ferramenta os seguintes aplicações:
 
-###### Elasticsearch https://www.elastic.co/pt/
-###### Logstash https://www.elastic.co/products/logstash
-###### Kibana https://www.elastic.co/products/kibana
-###### Filebeat https://www.elastic.co/products/beats/filebeat
-###### Python3 https://www.python.org/
-###### Chatterbot https://chatterbot.readthedocs.io/en/stable/
-###### NLTK https://www.nltk.org/    
-
+	-> Elasticsearch https://www.elastic.co/pt/
+	-> Logstash https://www.elastic.co/products/logstash
+	-> Kibana https://www.elastic.co/products/kibana
+	-> Filebeat https://www.elastic.co/products/beats/filebeat
+	-> Python3 https://www.python.org/
+	-> Chatterbot https://chatterbot.readthedocs.io/en/stable/
+	-> NLTK https://www.nltk.org/  
+	
 OBS: Antes de executar o projeto siga todos os passos abaixo, observando o ambiente que esta executando o DOCKER
 
 # Trocar o token do BOT do Telegram
