@@ -15,8 +15,7 @@ Oráculo BOT Telegram com ELK
 	-> Chatterbot https://chatterbot.readthedocs.io/en/stable/
 	-> NLTK https://www.nltk.org/  
 	
-![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/elk.png	
-)
+![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/elk.png)
 	
 OBS: Antes de executar o projeto siga todos os passos abaixo, observando o ambiente que esta executando o DOCKER
 
@@ -118,3 +117,9 @@ https://core.telegram.org/bots
 	-> "/liga"
 	-> "/ping"
 	-> "/hostname"
+
+![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/bot01.png)
+
+![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/bot02.png)
+
+![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/bot03.png)
