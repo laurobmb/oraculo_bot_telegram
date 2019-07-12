@@ -118,6 +118,8 @@ https://core.telegram.org/bots
 	-> "/ping"
 	-> "/hostname"
 
-![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/bot01.png) ![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/bot02.png) ![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/bot03.png)
+![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/bot01.png)
+
+![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/bot02.png) ![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/bot03.png)
 
 ![Screenshot](https://raw.githubusercontent.com/laurobmb/oraculo_bot_telegram/master/imagens/dashboad_example.png)
