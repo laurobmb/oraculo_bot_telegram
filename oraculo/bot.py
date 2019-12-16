@@ -530,7 +530,7 @@ def chatterbot_msg(MSG):
 	return output
 
 def main():
-		TOKEN='868879441:AAE0BXeFe9eW4QOKKA_ZxhijiNdg-FB_jTY'
+		TOKEN='326030510:AAHB-lu3gknKD6hSi_EROICmMiQtPJ5LL2I'
 		updater = Updater(TOKEN, use_context=True)
 		updater.dispatcher.add_handler(CommandHandler('start', start))
 #### Comandos COMUNS
